@@ -22,6 +22,11 @@ class RestaurantTableViewController: UITableViewController {
                             "upstate.jpg", "traif.jpg", "grahamavenuemeats.jpg", "wafflewolf.jpg",
                             "fiveleaves.jpg", "cafelore.jpg", "confessional.jpg", "barrafina.jpg",
                             "donostia.jpg", "royaloak.jpg", "thaicafe.jpg"]
+    
+    var restaurantLocations = ["Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong","Hong Kong", "Hong Kong", "Hong Kong", "Sydney", "Sydney", "Sydney", "New  York", "New York", "New York", "New York", "New York", "New York", "New York","London", "London", "London", "London"]
+    
+    var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +37,7 @@ class RestaurantTableViewController: UITableViewController {
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,8 +50,10 @@ class RestaurantTableViewController: UITableViewController {
         
         cell.nameLabel.text = restaurantNames[indexPath.row]
         cell.thumbnailImageView.image = UIImage(named: restaurantImages[indexPath.row])
-        cell.typeLabel.text = "NA"
-        cell.locationLabel.text = "NA"
+        cell.thumbnailImageView.layer.cornerRadius = 30.0
+        cell.thumbnailImageView.clipsToBounds = true
+        cell.typeLabel.text = restaurantTypes[indexPath.row]
+        cell.locationLabel.text = restaurantLocations[indexPath.row]
         
         return cell
     }
