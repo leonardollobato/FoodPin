@@ -8,35 +8,40 @@
 
 import UIKit
 
+
 class RestaurantTableViewController: UITableViewController {
     
     var restaurants:[Restaurant] = [
-            Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "Hong Kong", image: "cafedeadend.jpg", isVisited: false),
-            Restaurant(name: "Homei", type: "Cafe", location: "Hong Kong", image: "homei.jpg", isVisited: false),
-            Restaurant(name: "Teakha", type: "Tea House", location: "Hong Kong", image:"teakha.jpg", isVisited: false),
-            Restaurant(name: "Cafe loisl", type: "Austrian / Causual Drink", location:"Hong Kong", image: "cafeloisl.jpg", isVisited: false),
-            Restaurant(name: "Petite Oyster", type: "French", location: "Hong Kong", image: "petiteoyster.jpg", isVisited: false),
-            Restaurant(name: "For Kee Restaurant", type: "Bakery", location: "Hong Kong", image: "forkeerestaurant.jpg", isVisited: false),
-            Restaurant(name: "Po's Atelier", type: "Bakery", location: "Hong Kong",image: "posatelier.jpg", isVisited: false),
-            Restaurant(name: "Bourke Street Backery", type: "Chocolate", location:"Sydney", image: "bourkestreetbakery.jpg", isVisited: false),
-            Restaurant(name: "Haigh's Chocolate", type: "Cafe", location: "Sydney", image: "haighschocolate.jpg", isVisited: false),
-            Restaurant(name: "Palomino Espresso", type: "American / Seafood", location:"Sydney", image: "palominoespresso.jpg", isVisited: false),
-            Restaurant(name: "Upstate", type: "American", location: "New York", image: "upstate.jpg", isVisited: false),
-            Restaurant(name: "Traif", type: "American", location: "New York", image:"traif.jpg", isVisited: false),
-            Restaurant(name: "Graham Avenue Meats", type: "Breakfast & Brunch", location: "New York", image: "grahamavenuemeats.jpg", isVisited: false),
-            Restaurant(name: "Waffle & Wolf", type: "Coffee & Tea", location: "New York", image: "wafflewolf.jpg", isVisited: false),
-            Restaurant(name: "Five Leaves", type: "Coffee & Tea", location: "New York",image: "fiveleaves.jpg", isVisited: false),
-            Restaurant(name: "Cafe Lore", type: "Latin American", location: "New York", image: "cafelore.jpg", isVisited: false),
-            Restaurant(name: "Confessional", type: "Spanish", location: "New York",image: "confessional.jpg", isVisited: false),
-            Restaurant(name: "Barrafina", type: "Spanish", location: "London", image:"barrafina.jpg", isVisited: false),
-            Restaurant(name: "Donostia", type: "Spanish", location: "London", image: "donostia.jpg", isVisited: false),
-            Restaurant(name: "Royal Oak", type: "British", location: "London", image: "royaloak.jpg", isVisited: false),
-            Restaurant(name: "Thai Cafe", type: "Thai", location: "London", image:"thaicafe.jpg", isVisited: false)
+            Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "Hong Kong", image: "cafedeadend.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Homei", type: "Cafe", location: "Hong Kong", image: "homei.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Teakha", type: "Tea House", location: "Hong Kong", image:"teakha.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Cafe loisl", type: "Austrian / Causual Drink", location:"Hong Kong", image: "cafeloisl.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Petite Oyster", type: "French", location: "Hong Kong", image: "petiteoyster.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "For Kee Restaurant", type: "Bakery", location: "Hong Kong", image: "forkeerestaurant.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Po's Atelier", type: "Bakery", location: "Hong Kong",image: "posatelier.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Bourke Street Backery", type: "Chocolate", location:"Sydney", image: "bourkestreetbakery.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Haigh's Chocolate", type: "Cafe", location: "Sydney", image: "haighschocolate.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Palomino Espresso", type: "American / Seafood", location:"Sydney", image: "palominoespresso.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Upstate", type: "American", location: "New York", image: "upstate.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Traif", type: "American", location: "New York", image:"traif.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Graham Avenue Meats", type: "Breakfast & Brunch", location: "New York", image: "grahamavenuemeats.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Waffle & Wolf", type: "Coffee & Tea", location: "New York", image: "wafflewolf.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Five Leaves", type: "Coffee & Tea", location: "New York",image: "fiveleaves.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Cafe Lore", type: "Latin American", location: "New York", image: "cafelore.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Confessional", type: "Spanish", location: "New York",image: "confessional.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Barrafina", type: "Spanish", location: "London", image:"barrafina.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Donostia", type: "Spanish", location: "London", image: "donostia.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Royal Oak", type: "British", location: "London", image: "royaloak.jpg", isVisited: false, phoneNumber: "82828-3234"),
+            Restaurant(name: "Thai Cafe", type: "Thai", location: "London", image:"thaicafe.jpg", isVisited: false, phoneNumber: "82828-3234")
         ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action:nil)
+    
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -102,5 +107,11 @@ class RestaurantTableViewController: UITableViewController {
                 destinationController.restaurant = restaurants[indexPath.row]
             }
         }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
     }
 }
