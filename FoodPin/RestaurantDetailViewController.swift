@@ -11,15 +11,16 @@ import UIKit
 class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var restaurantImageView:UIImageView!
-//    @IBOutlet var restaurantName:UILabel!
-//    @IBOutlet var restaurantType:UILabel!
-//    @IBOutlet var restaurantLocation:UILabel!
+    @IBOutlet var tableView:UITableView!
     
     var restaurant:Restaurant!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.estimatedRowHeight = 36.0
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         restaurantImageView.image = UIImage(named: restaurant.image)
         title = restaurant.name

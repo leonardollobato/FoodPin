@@ -16,7 +16,7 @@ class Restaurant{
     var isVisited = false
     var phoneNumber = ""
     
-    init(name:String, type:String,location:String, image:String, isVisited:Bool, phoneNumber:String){
+    init(name:String, type:String,location:String, phoneNumber:String, image:String, isVisited:Bool){
         self.name = name
         self.location = location
         self.type = type
