@@ -71,5 +71,9 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+    @IBAction func close(segue:UIStoryboardSegue){
+        
+    }
 
 }
