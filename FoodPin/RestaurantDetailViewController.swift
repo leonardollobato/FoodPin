@@ -12,6 +12,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
 
     @IBOutlet var restaurantImageView:UIImageView!
     @IBOutlet var tableView:UITableView!
+    @IBOutlet var ratingButton:UIButton!
     
     var restaurant:Restaurant!
     
@@ -43,7 +44,6 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             case 0:
                 cell.fieldLabel.text = "Name"
                 cell.valueLabel.text = restaurant.name
-                
             case 1:
                 cell.fieldLabel.text = "Type"
                 cell.valueLabel.text = restaurant.type
@@ -72,8 +72,20 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showReview" {
+            let destinationVC = segue.destinationViewController as! ReviewViewController
+            destinationVC.bgImage = (restaurant.image != "" ? restaurant.image : "barrafina")
+        }
+    }
+    
     @IBAction func close(segue:UIStoryboardSegue){
-        
+        if let ReviewViewController = segue.sourceViewController as? ReviewViewController {
+            if let rating = ReviewViewController.rating {
+                ratingButton.setImage(UIImage(named:rating), forState: UIControlState.Normal)
+                restaurant.rating = rating
+            }
+        }
     }
 
 }

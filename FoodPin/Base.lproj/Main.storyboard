@@ -187,6 +187,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ratingButton" destination="ce1-QR-quy" id="sGv-cP-Kyk"/>
                         <outlet property="restaurantImageView" destination="Y3X-ZP-fyp" id="Cmo-KC-Uzp"/>
                         <outlet property="tableView" destination="Ojs-6U-2Gh" id="wJh-Ch-0xP"/>
                     </connections>
@@ -231,7 +232,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0de-4d-94B">
                                         <rect key="frame" x="21" y="82" width="230" height="70"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGf-eI-F59">
+                                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGf-eI-F59">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -245,8 +246,11 @@
                                                         <integer key="value" value="35"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ratingSelected:" destination="Yjm-y3-u7X" eventType="touchUpInside" id="v0B-Vg-9d7"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIi-cT-LIK">
+                                            <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIi-cT-LIK">
                                                 <rect key="frame" x="80" y="0.0" width="70" height="70"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -260,8 +264,11 @@
                                                         <integer key="value" value="35"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ratingSelected:" destination="Yjm-y3-u7X" eventType="touchUpInside" id="FhY-HD-sUd"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7Z-Vn-3cL">
+                                            <button opaque="NO" tag="300" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7Z-Vn-3cL">
                                                 <rect key="frame" x="160" y="0.0" width="70" height="70"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -275,6 +282,9 @@
                                                         <integer key="value" value="35"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ratingSelected:" destination="Yjm-y3-u7X" eventType="touchUpInside" id="RHj-5q-dob"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -289,7 +299,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="close"/>
                                 <connections>
-                                    <segue destination="b25-00-aNL" kind="unwind" unwindAction="close:" id="Nxx-lZ-hQh"/>
+                                    <segue destination="b25-00-aNL" kind="unwind" identifier="unwindToDetailView" unwindAction="close:" id="Nxx-lZ-hQh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -315,6 +325,9 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="PQP-em-TY8" id="EXc-ga-GFw"/>
+                        <outlet property="dislike" destination="QGf-eI-F59" id="nHC-Ec-CHH"/>
+                        <outlet property="good" destination="dIi-cT-LIK" id="zlk-uB-91T"/>
+                        <outlet property="great" destination="a7Z-Vn-3cL" id="WBB-JM-C0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTW-kz-Z9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
