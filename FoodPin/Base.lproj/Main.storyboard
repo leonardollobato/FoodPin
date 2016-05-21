@@ -99,7 +99,7 @@
         <!--New Restaurant-->
         <scene sceneID="vtv-uL-gee">
             <objects>
-                <tableViewController id="iTq-a2-Voz" sceneMemberID="viewController">
+                <tableViewController id="iTq-a2-Voz" customClass="AddRestaurantController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JJg-vk-FPw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,18 +114,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoalbum" translatesAutoresizingMaskIntoConstraints="NO" id="CNw-gy-BbN">
-                                                    <rect key="frame" x="180" y="61" width="240" height="128"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="240" id="Wv7-3c-Vmi"/>
-                                                    </constraints>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoalbum" translatesAutoresizingMaskIntoConstraints="NO" id="CNw-gy-BbN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="CNw-gy-BbN" firstAttribute="centerX" secondItem="9hO-PZ-Tnz" secondAttribute="centerX" id="4ud-8G-wch"/>
-                                                <constraint firstItem="CNw-gy-BbN" firstAttribute="centerY" secondItem="9hO-PZ-Tnz" secondAttribute="centerY" id="HZx-wW-aot"/>
-                                                <constraint firstItem="CNw-gy-BbN" firstAttribute="top" secondItem="9hO-PZ-Tnz" secondAttribute="topMargin" constant="53" id="pOl-dx-DS2"/>
+                                                <constraint firstItem="CNw-gy-BbN" firstAttribute="top" secondItem="9hO-PZ-Tnz" secondAttribute="top" id="Igb-LJ-zAf"/>
+                                                <constraint firstItem="CNw-gy-BbN" firstAttribute="leading" secondItem="9hO-PZ-Tnz" secondAttribute="leading" id="RXt-9I-lI7"/>
+                                                <constraint firstAttribute="trailing" secondItem="CNw-gy-BbN" secondAttribute="trailing" id="Sjl-Mb-BxX"/>
+                                                <constraint firstItem="CNw-gy-BbN" firstAttribute="centerY" secondItem="9hO-PZ-Tnz" secondAttribute="centerY" id="bna-GT-wsr"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
@@ -294,6 +292,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="CNw-gy-BbN" id="ray-Qk-wd7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hkk-V2-bF0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="q4a-rO-3J3" userLabel="Exit" sceneMemberID="exit"/>
