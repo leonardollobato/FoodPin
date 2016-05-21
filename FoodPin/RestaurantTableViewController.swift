@@ -117,4 +117,8 @@ class RestaurantTableViewController: UITableViewController {
         
         navigationController?.hidesBarsOnSwipe = true
     }
+    
+    @IBAction func unwindToHomeScreen(segue:UIStoryboardSegue){
+        
+    }
 }

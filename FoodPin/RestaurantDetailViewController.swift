@@ -77,6 +77,11 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             let destinationVC = segue.destinationViewController as! ReviewViewController
             destinationVC.bgImage = (restaurant.image != "" ? restaurant.image : "barrafina")
         }
+        
+        if segue.identifier == "showMap" {
+            let destinationVC = segue.destinationViewController as! MapViewController
+            destinationVC.restaurant = restaurant
+        }
     }
     
     @IBAction func close(segue:UIStoryboardSegue){
