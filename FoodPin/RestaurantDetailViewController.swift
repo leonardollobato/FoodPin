@@ -23,7 +23,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        restaurantImageView.image = UIImage(named: restaurant.image)
+        restaurantImageView.image = UIImage(data: restaurant.image!)
         title = restaurant.name
 
     }
@@ -52,7 +52,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
                 cell.valueLabel.text = restaurant.location
             case 3:
                 cell.fieldLabel.text = "Been Here"
-                cell.valueLabel.text = (restaurant.isVisited) ? "Yes, I've Been here" : "No"
+                if let isVisited = restaurant.isVisited?.boolValue{
+                    cell.valueLabel.text = isVisited ? "Yes, I've Been here" : "No"
+                }
+            
             case 4:
                 cell.fieldLabel.text = "Phone"
                 cell.valueLabel.text = restaurant.phoneNumber
@@ -70,12 +73,19 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        if let rtn = restaurant.rating {
+            ratingButton.setImage(UIImage(named:rtn), forState: .Normal)
+        }
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showReview" {
             let destinationVC = segue.destinationViewController as! ReviewViewController
-            destinationVC.bgImage = (restaurant.image != "" ? restaurant.image : "barrafina")
+            //destinationVC.bgImage = "barrafina"
+            //destinationVC.bgImage = (restaurant.image != "" ? restaurant.image: "barrafina")
+            destinationVC.bgImage = UIImage(data: restaurant.image!)
         }
         
         if segue.identifier == "showMap" {
@@ -89,6 +99,17 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             if let rating = ReviewViewController.rating {
                 ratingButton.setImage(UIImage(named:rating), forState: UIControlState.Normal)
                 restaurant.rating = rating
+                
+                if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext{
+                    do {
+                        print("updateint")
+                        try managedObjectContext.save()
+                    }catch{
+                        print(error)
+                    }
+                }
+                
+                
             }
         }
     }

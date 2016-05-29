@@ -15,13 +15,13 @@ class ReviewViewController: UIViewController {
     @IBOutlet var good:UIButton!
     @IBOutlet var great:UIButton!
     var rating:String?
-    var bgImage:String?
+    var bgImage:UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        backgroundImageView.image = UIImage(named: bgImage!)
+        backgroundImageView.image = bgImage!
       
         let blurEffect = UIBlurEffect(style: .Dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)

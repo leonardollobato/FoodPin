@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddRestaurantController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -15,12 +16,14 @@ class AddRestaurantController: UITableViewController, UIImagePickerControllerDel
     @IBOutlet var nameTextField:UITextField!
     @IBOutlet var typeTextField:UITextField!
     @IBOutlet var locationTextField:UITextField!
+    @IBOutlet var phoneTextField:UITextField!
     
     @IBOutlet var yesButton:UIButton!
     @IBOutlet var noButton:UIButton!
     
     
     var hasVisited = true
+    var restaurant:Restaurant!
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == 0 {
@@ -56,7 +59,8 @@ class AddRestaurantController: UITableViewController, UIImagePickerControllerDel
 
         if (nameTextField.text! == ""   ||
             locationTextField.text! == ""   ||
-            typeTextField.text! == "" ){
+            typeTextField.text! == "" ||
+            phoneTextField.text == ""){
             
             var message = "O(s) campo(s):\n"
             
@@ -72,6 +76,10 @@ class AddRestaurantController: UITableViewController, UIImagePickerControllerDel
                 message.appendContentsOf("\nField Type")
             }
             
+            if phoneTextField.text! == "" {
+                message.appendContentsOf("\nField Phone")
+            }
+            
             message.appendContentsOf("\n\n foram deixados em branco, por favor preenche-los")
             
             
@@ -83,12 +91,28 @@ class AddRestaurantController: UITableViewController, UIImagePickerControllerDel
             
         }else{
             
-        
-            print("Name: \(self.nameTextField.text!)")
-            print("Type: \(self.typeTextField.text!)")
-            print("Location: \(self.locationTextField.text!)")
-            print("Has Been?: " + (self.hasVisited ? "YEP" : "NOPE"))
-            
+            if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext{
+                restaurant =
+                NSEntityDescription.insertNewObjectForEntityForName("Restaurant",
+                                    inManagedObjectContext: managedObjectContext) as! Restaurant
+                
+                restaurant.name = self.nameTextField.text!
+                restaurant.location = self.locationTextField.text!
+                restaurant.type = self.typeTextField.text!
+                restaurant.phoneNumber = self.phoneTextField.text!
+                
+                if let restaurantImage = imageView.image {
+                    restaurant.image = UIImagePNGRepresentation(restaurantImage)
+                }
+                restaurant.isVisited = hasVisited
+                
+                do {
+                    try managedObjectContext.save()
+                }catch{
+                    print(error)
+                    return
+                }
+            }
             performSegueWithIdentifier("unwindToHomeScreen", sender: self)
             
             //dismissViewControllerAnimated(true, completion: nil)

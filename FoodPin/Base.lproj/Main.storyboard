@@ -231,10 +231,10 @@
                                         <rect key="frame" x="0.0" y="530" width="600" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HqG-ii-Grf" id="i6v-jN-NPA">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="71.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAVE YOU BEEN HERE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vey-KD-hXz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHONE NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vey-KD-hXz">
                                                     <rect key="frame" x="8" y="8" width="205" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="eam-NX-We4"/>
@@ -244,41 +244,74 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghM-c8-eJV">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="40b-Mu-aG8">
+                                                    <rect key="frame" x="8" y="37" width="577" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="40b-Mu-aG8" secondAttribute="trailing" constant="7" id="DYz-6k-8kn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="40b-Mu-aG8" secondAttribute="bottom" constant="-3.5" id="IRF-39-17c"/>
+                                                <constraint firstItem="vey-KD-hXz" firstAttribute="top" secondItem="i6v-jN-NPA" secondAttribute="topMargin" id="Taq-DX-sc2"/>
+                                                <constraint firstItem="40b-Mu-aG8" firstAttribute="top" secondItem="vey-KD-hXz" secondAttribute="bottom" constant="8" symbolic="YES" id="V7v-x9-3dj"/>
+                                                <constraint firstItem="vey-KD-hXz" firstAttribute="leading" secondItem="i6v-jN-NPA" secondAttribute="leadingMargin" id="bHF-3T-TUn"/>
+                                                <constraint firstItem="vey-KD-hXz" firstAttribute="leading" secondItem="40b-Mu-aG8" secondAttribute="leading" id="iZw-AG-0Up"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="72" id="eOh-LP-t30">
+                                        <rect key="frame" x="0.0" y="602" width="600" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eOh-LP-t30" id="S4Z-6e-ma3">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="71.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAVE YOU BEEN HERE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyf-IX-EbB">
+                                                    <rect key="frame" x="8" y="8" width="205" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="ILs-qP-HSz"/>
+                                                        <constraint firstAttribute="width" constant="205" id="ZYY-XE-DF9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueo-bW-s8K">
                                                     <rect key="frame" x="8" y="37" width="57" height="27"/>
                                                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="57" id="QYf-74-vWC"/>
+                                                        <constraint firstAttribute="width" constant="57" id="L6B-HY-oTL"/>
                                                     </constraints>
                                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="YES"/>
                                                     <connections>
-                                                        <action selector="toogleHaveYouBeen:" destination="iTq-a2-Voz" eventType="touchUpInside" id="VeJ-bb-LV8"/>
+                                                        <action selector="toogleHaveYouBeen:" destination="iTq-a2-Voz" eventType="touchUpInside" id="luR-l5-2Ev"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGz-fN-zfm">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lR-CN-13u">
                                                     <rect key="frame" x="68" y="37" width="57" height="27"/>
                                                     <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="57" id="30y-1t-h2G"/>
+                                                        <constraint firstAttribute="width" constant="57" id="csn-Q1-XTc"/>
                                                     </constraints>
                                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="NO"/>
                                                     <connections>
-                                                        <action selector="toogleHaveYouBeen:" destination="iTq-a2-Voz" eventType="touchUpInside" id="7nc-Uk-FSR"/>
+                                                        <action selector="toogleHaveYouBeen:" destination="iTq-a2-Voz" eventType="touchUpInside" id="1tR-Tj-RW1"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ghM-c8-eJV" firstAttribute="baseline" secondItem="MGz-fN-zfm" secondAttribute="firstBaseline" id="5La-3w-8Lt"/>
-                                                <constraint firstItem="MGz-fN-zfm" firstAttribute="baseline" secondItem="ghM-c8-eJV" secondAttribute="firstBaseline" id="5cm-A6-dBp"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ghM-c8-eJV" secondAttribute="bottom" constant="-0.5" id="9ix-K2-zYd"/>
-                                                <constraint firstItem="vey-KD-hXz" firstAttribute="leading" secondItem="i6v-jN-NPA" secondAttribute="leadingMargin" id="AUt-Al-ezk"/>
-                                                <constraint firstItem="vey-KD-hXz" firstAttribute="top" secondItem="i6v-jN-NPA" secondAttribute="topMargin" id="KP3-b5-a6A"/>
-                                                <constraint firstItem="ghM-c8-eJV" firstAttribute="top" secondItem="vey-KD-hXz" secondAttribute="bottom" constant="8" symbolic="YES" id="ZV9-Fh-f1N"/>
-                                                <constraint firstItem="MGz-fN-zfm" firstAttribute="leading" secondItem="ghM-c8-eJV" secondAttribute="trailing" constant="3" id="Zd6-Vx-8M2"/>
-                                                <constraint firstItem="vey-KD-hXz" firstAttribute="leading" secondItem="ghM-c8-eJV" secondAttribute="leading" id="hGY-oI-Rv6"/>
-                                                <constraint firstItem="ghM-c8-eJV" firstAttribute="top" secondItem="MGz-fN-zfm" secondAttribute="top" id="in7-g3-MYF"/>
+                                                <constraint firstItem="dyf-IX-EbB" firstAttribute="top" secondItem="S4Z-6e-ma3" secondAttribute="topMargin" id="0jn-cR-c1E"/>
+                                                <constraint firstItem="ueo-bW-s8K" firstAttribute="baseline" secondItem="1lR-CN-13u" secondAttribute="firstBaseline" id="9AO-CB-JSl"/>
+                                                <constraint firstItem="dyf-IX-EbB" firstAttribute="leading" secondItem="ueo-bW-s8K" secondAttribute="leading" id="9Cl-09-tDS"/>
+                                                <constraint firstItem="dyf-IX-EbB" firstAttribute="leading" secondItem="S4Z-6e-ma3" secondAttribute="leadingMargin" id="Ara-Gs-Pq1"/>
+                                                <constraint firstItem="ueo-bW-s8K" firstAttribute="top" secondItem="dyf-IX-EbB" secondAttribute="bottom" constant="8" symbolic="YES" id="CoF-N4-88M"/>
+                                                <constraint firstItem="1lR-CN-13u" firstAttribute="leading" secondItem="ueo-bW-s8K" secondAttribute="trailing" constant="3" id="Lld-WW-4Ht"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ueo-bW-s8K" secondAttribute="bottom" constant="-0.5" id="W6y-uA-f1b"/>
+                                                <constraint firstItem="ueo-bW-s8K" firstAttribute="top" secondItem="1lR-CN-13u" secondAttribute="top" id="XdP-hG-mOF"/>
+                                                <constraint firstItem="1lR-CN-13u" firstAttribute="baseline" secondItem="ueo-bW-s8K" secondAttribute="firstBaseline" id="n6n-4O-ztD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -308,9 +341,10 @@
                         <outlet property="imageView" destination="CNw-gy-BbN" id="ray-Qk-wd7"/>
                         <outlet property="locationTextField" destination="nOL-f0-stj" id="sQB-YC-IhO"/>
                         <outlet property="nameTextField" destination="bOK-Z4-8RZ" id="KcH-sg-if3"/>
-                        <outlet property="noButton" destination="MGz-fN-zfm" id="z53-2Z-QKd"/>
+                        <outlet property="noButton" destination="1lR-CN-13u" id="LoM-Gc-gQw"/>
+                        <outlet property="phoneTextField" destination="40b-Mu-aG8" id="z2I-5H-O7U"/>
                         <outlet property="typeTextField" destination="cJP-5i-SqD" id="4nq-W4-mk5"/>
-                        <outlet property="yesButton" destination="ghM-c8-eJV" id="36w-tQ-pS0"/>
+                        <outlet property="yesButton" destination="ueo-bW-s8K" id="w8b-rR-dUr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hkk-V2-bF0" userLabel="First Responder" sceneMemberID="firstResponder"/>
