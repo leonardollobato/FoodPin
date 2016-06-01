@@ -10,6 +10,8 @@
 		1F13A991359EC048DF423EF6 /* Pods_FoodPin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5B942FB904E1C7C86CFF1A /* Pods_FoodPin.framework */; };
 		D01E89E71CE9C1230060A7EF /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E89E61CE9C1230060A7EF /* RestaurantDetailViewController.swift */; };
 		D01E89E91CE9CF7F0060A7EF /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E89E81CE9CF7F0060A7EF /* Restaurant.swift */; };
+		D032D6751CFE5FA400FEA4CD /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D032D6741CFE5FA400FEA4CD /* WalkthroughContentViewController.swift */; };
+		D032D6771CFE623200FEA4CD /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D032D6761CFE623200FEA4CD /* WalkthroughPageViewController.swift */; };
 		D04D9DC11CEE676C00B0139B /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D9DC01CEE676C00B0139B /* ReviewViewController.swift */; };
 		D04FECFE1CFAB5A500E6D39A /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D04FECFC1CFAB5A500E6D39A /* FoodPin.xcdatamodeld */; };
 		D0BEE6A31CEB090F00BAAC75 /* RestaurantDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BEE6A21CEB090F00BAAC75 /* RestaurantDetailTableViewCell.swift */; };
@@ -30,6 +32,8 @@
 		CB2C206C1A1424D6136E1A18 /* Pods-FoodPin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPin/Pods-FoodPin.debug.xcconfig"; sourceTree = "<group>"; };
 		D01E89E61CE9C1230060A7EF /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		D01E89E81CE9CF7F0060A7EF /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		D032D6741CFE5FA400FEA4CD /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		D032D6761CFE623200FEA4CD /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		D04D9DC01CEE676C00B0139B /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		D04FECFD1CFAB5A500E6D39A /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		D0BEE6A21CEB090F00BAAC75 /* RestaurantDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -80,11 +84,13 @@
 		D0CBC0B81CF0B70C006FCEF6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D032D6761CFE623200FEA4CD /* WalkthroughPageViewController.swift */,
 				D0D9950D1CE486B20069EB16 /* RestaurantTableViewController.swift */,
 				D01E89E61CE9C1230060A7EF /* RestaurantDetailViewController.swift */,
 				D04D9DC01CEE676C00B0139B /* ReviewViewController.swift */,
 				D0CBC0BD1CF0E79E006FCEF6 /* MapViewController.swift */,
 				D0CBC0BF1CF10301006FCEF6 /* AddRestaurantController.swift */,
+				D032D6741CFE5FA400FEA4CD /* WalkthroughContentViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -272,6 +278,8 @@
 				D0D9950E1CE486B20069EB16 /* RestaurantTableViewController.swift in Sources */,
 				D04D9DC11CEE676C00B0139B /* ReviewViewController.swift in Sources */,
 				D0D995101CE4880E0069EB16 /* RestaurantTableViewCell.swift in Sources */,
+				D032D6751CFE5FA400FEA4CD /* WalkthroughContentViewController.swift in Sources */,
+				D032D6771CFE623200FEA4CD /* WalkthroughPageViewController.swift in Sources */,
 				D0BEE6A31CEB090F00BAAC75 /* RestaurantDetailTableViewCell.swift in Sources */,
 				D01E89E71CE9C1230060A7EF /* RestaurantDetailViewController.swift in Sources */,
 				D04FECFE1CFAB5A500E6D39A /* FoodPin.xcdatamodeld in Sources */,

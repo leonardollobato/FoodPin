@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PaN-MJ-4tR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G7b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PaN-MJ-4tR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -96,6 +97,83 @@
             </objects>
             <point key="canvasLocation" x="1117" y="339"/>
         </scene>
+        <!--Walkthrough Content View Controller-->
+        <scene sceneID="IZm-tc-7Q0">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughContentViewController" id="bqx-gI-Nzh" customClass="WalkthroughContentViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wRz-1a-dMd"/>
+                        <viewControllerLayoutGuide type="bottom" id="kTV-pA-k7t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oKB-dn-L7c">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personalize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFg-mj-j4k">
+                                <rect key="frame" x="236" y="28" width="127" height="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin your favorite restaurants and create your own food guide" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jw8-EU-sYz">
+                                <rect key="frame" x="159" y="499" width="282" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="6yg-55-q0y"/>
+                                    <constraint firstAttribute="width" constant="282" id="lcP-38-Mzu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QsG-2A-TgZ">
+                                <rect key="frame" x="31" y="69" width="538" height="416.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QsG-2A-TgZ" secondAttribute="height" multiplier="270:209" id="qxb-Sn-CgD"/>
+                                    <constraint firstAttribute="width" secondItem="QsG-2A-TgZ" secondAttribute="height" multiplier="270:209" id="ymx-tC-mFm"/>
+                                </constraints>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="K17-DQ-GrY">
+                                <rect key="frame" x="280" y="555" width="39" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3T-Yc-3PL">
+                                <rect key="frame" x="532" y="563" width="37" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonTaped:" destination="bqx-gI-Nzh" eventType="touchUpInside" id="otd-Tm-Jax"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83174222707748413" green="0.12661930918693542" blue="0.070506773889064789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kTV-pA-k7t" firstAttribute="top" secondItem="K17-DQ-GrY" secondAttribute="bottom" constant="8" id="0xR-zL-Y09"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z3T-Yc-3PL" secondAttribute="trailing" constant="11" id="5ak-ff-zlL"/>
+                            <constraint firstItem="QsG-2A-TgZ" firstAttribute="top" secondItem="pFg-mj-j4k" secondAttribute="bottom" constant="11" id="8Qq-hP-HX7"/>
+                            <constraint firstItem="Jw8-EU-sYz" firstAttribute="centerX" secondItem="oKB-dn-L7c" secondAttribute="centerX" id="Phi-es-mk4"/>
+                            <constraint firstItem="K17-DQ-GrY" firstAttribute="centerX" secondItem="oKB-dn-L7c" secondAttribute="centerX" id="YDf-sh-TKh"/>
+                            <constraint firstItem="pFg-mj-j4k" firstAttribute="top" secondItem="wRz-1a-dMd" secondAttribute="bottom" constant="8" id="YvE-mv-pFG"/>
+                            <constraint firstItem="Jw8-EU-sYz" firstAttribute="top" secondItem="QsG-2A-TgZ" secondAttribute="bottom" constant="14" id="Z9m-j9-Kb9"/>
+                            <constraint firstItem="pFg-mj-j4k" firstAttribute="centerX" secondItem="oKB-dn-L7c" secondAttribute="centerX" id="bsG-4D-a6X"/>
+                            <constraint firstItem="QsG-2A-TgZ" firstAttribute="leading" secondItem="oKB-dn-L7c" secondAttribute="leadingMargin" constant="11" id="cWm-5X-a3w"/>
+                            <constraint firstItem="kTV-pA-k7t" firstAttribute="top" secondItem="z3T-Yc-3PL" secondAttribute="bottom" constant="8" id="dkq-rb-KQ7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QsG-2A-TgZ" secondAttribute="trailing" constant="11" id="rqr-Xu-qg7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentImageView" destination="QsG-2A-TgZ" id="7hH-ML-cXm"/>
+                        <outlet property="contentLabel" destination="Jw8-EU-sYz" id="BBo-Xb-mgm"/>
+                        <outlet property="fowardButton" destination="z3T-Yc-3PL" id="O4A-5L-TYp"/>
+                        <outlet property="headingLabel" destination="pFg-mj-j4k" id="Oxf-Nf-VHl"/>
+                        <outlet property="pageControl" destination="K17-DQ-GrY" id="iMe-IV-7tD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHV-Ro-i1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821" y="-1012"/>
+        </scene>
         <!--New Restaurant-->
         <scene sceneID="vtv-uL-gee">
             <objects>
@@ -142,7 +220,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="teY-q7-Qey"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bOK-Z4-8RZ">
@@ -175,7 +253,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="rXw-Af-bRM"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJP-5i-SqD">
@@ -208,7 +286,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="UEN-Pk-55o"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nOL-f0-stj">
@@ -231,7 +309,7 @@
                                         <rect key="frame" x="0.0" y="530" width="600" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HqG-ii-Grf" id="i6v-jN-NPA">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="71.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHONE NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vey-KD-hXz">
@@ -241,7 +319,7 @@
                                                         <constraint firstAttribute="width" constant="205" id="igp-V1-MiN"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="40b-Mu-aG8">
@@ -274,7 +352,7 @@
                                                         <constraint firstAttribute="width" constant="205" id="ZYY-XE-DF9"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueo-bW-s8K">
@@ -668,6 +746,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOy-2u-WXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="419" y="339"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="15L-Ff-eOY">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="xer-8U-5K0" customClass="WalkthroughPageViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tKz-em-MEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120" y="-1003"/>
         </scene>
         <!--New Restaurant-->
         <scene sceneID="gAG-n9-dxV">
