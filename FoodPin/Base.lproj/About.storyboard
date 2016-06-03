@@ -8,18 +8,31 @@
         <!--About-->
         <scene sceneID="rUd-iI-aM8">
             <objects>
-                <tableViewController id="gT6-nD-cWz" sceneMemberID="viewController">
+                <tableViewController id="gT6-nD-cWz" customClass="AboutTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gA2-X8-guC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about-logo" id="E94-66-PrE">
+                            <rect key="frame" x="0.0" y="64" width="600" height="170"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TtA-QA-i8w">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="uIL-Gj-gyP" style="IBUITableViewCellStyleDefault" id="TtA-QA-i8w">
+                                <rect key="frame" x="0.0" y="262" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TtA-QA-i8w" id="Fdn-Ie-jFU">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uIL-Gj-gyP">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -29,10 +42,46 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="About" id="cqP-8K-w9L"/>
+                    <connections>
+                        <segue destination="MCb-Se-sL7" kind="show" identifier="showWebView" id="XGb-Aa-p89"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iua-YV-Ru6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-372" y="333"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="skY-dL-2Wh">
+            <objects>
+                <viewController id="MCb-Se-sL7" customClass="WebViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dpI-jx-hcO"/>
+                        <viewControllerLayoutGuide type="bottom" id="6TD-3Q-bB6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GnX-rd-rmm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFK-4g-fDA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sFK-4g-fDA" firstAttribute="top" secondItem="GnX-rd-rmm" secondAttribute="top" id="0x4-ZI-vgj"/>
+                            <constraint firstAttribute="trailing" secondItem="sFK-4g-fDA" secondAttribute="trailing" id="Uwg-ZE-7zp"/>
+                            <constraint firstItem="sFK-4g-fDA" firstAttribute="bottom" secondItem="6TD-3Q-bB6" secondAttribute="top" id="qK0-Pg-rM8"/>
+                            <constraint firstItem="sFK-4g-fDA" firstAttribute="leading" secondItem="GnX-rd-rmm" secondAttribute="leading" id="sAd-Pk-LaH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="sFK-4g-fDA" id="UxN-Qc-rnO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pf6-8S-cNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="286"/>
         </scene>
         <!--About-->
         <scene sceneID="teN-WZ-iCK">
@@ -55,5 +104,6 @@
     </scenes>
     <resources>
         <image name="about" width="25" height="25"/>
+        <image name="about-logo" width="485" height="200"/>
     </resources>
 </document>

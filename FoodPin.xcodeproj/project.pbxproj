@@ -10,6 +10,8 @@
 		1F13A991359EC048DF423EF6 /* Pods_FoodPin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5B942FB904E1C7C86CFF1A /* Pods_FoodPin.framework */; };
 		D002CCE01D01F27400934347 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D002CCDE1D01F27400934347 /* About.storyboard */; };
 		D002CCE21D01F2A100934347 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D002CCE11D01F2A100934347 /* Discover.storyboard */; };
+		D002CCE41D0204AA00934347 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D002CCE31D0204AA00934347 /* AboutTableViewController.swift */; };
+		D002CCE61D020FC400934347 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D002CCE51D020FC400934347 /* WebViewController.swift */; };
 		D01E89E71CE9C1230060A7EF /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E89E61CE9C1230060A7EF /* RestaurantDetailViewController.swift */; };
 		D01E89E91CE9CF7F0060A7EF /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E89E81CE9CF7F0060A7EF /* Restaurant.swift */; };
 		D032D6751CFE5FA400FEA4CD /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D032D6741CFE5FA400FEA4CD /* WalkthroughContentViewController.swift */; };
@@ -34,6 +36,8 @@
 		CB2C206C1A1424D6136E1A18 /* Pods-FoodPin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPin/Pods-FoodPin.debug.xcconfig"; sourceTree = "<group>"; };
 		D002CCDF1D01F27400934347 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/About.storyboard; sourceTree = "<group>"; };
 		D002CCE11D01F2A100934347 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		D002CCE31D0204AA00934347 /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		D002CCE51D020FC400934347 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D01E89E61CE9C1230060A7EF /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		D01E89E81CE9CF7F0060A7EF /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		D032D6741CFE5FA400FEA4CD /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				D0CBC0BD1CF0E79E006FCEF6 /* MapViewController.swift */,
 				D0CBC0BF1CF10301006FCEF6 /* AddRestaurantController.swift */,
 				D032D6741CFE5FA400FEA4CD /* WalkthroughContentViewController.swift */,
+				D002CCE31D0204AA00934347 /* AboutTableViewController.swift */,
+				D002CCE51D020FC400934347 /* WebViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0CBC0C01CF10301006FCEF6 /* AddRestaurantController.swift in Sources */,
+				D002CCE41D0204AA00934347 /* AboutTableViewController.swift in Sources */,
 				D01E89E91CE9CF7F0060A7EF /* Restaurant.swift in Sources */,
 				D0D9950E1CE486B20069EB16 /* RestaurantTableViewController.swift in Sources */,
 				D04D9DC11CEE676C00B0139B /* ReviewViewController.swift in Sources */,
@@ -291,6 +298,7 @@
 				D0BEE6A31CEB090F00BAAC75 /* RestaurantDetailTableViewCell.swift in Sources */,
 				D01E89E71CE9C1230060A7EF /* RestaurantDetailViewController.swift in Sources */,
 				D04FECFE1CFAB5A500E6D39A /* FoodPin.xcdatamodeld in Sources */,
+				D002CCE61D020FC400934347 /* WebViewController.swift in Sources */,
 				D0D994FC1CE485800069EB16 /* AppDelegate.swift in Sources */,
 				D0CBC0BE1CF0E79E006FCEF6 /* MapViewController.swift in Sources */,
 			);
