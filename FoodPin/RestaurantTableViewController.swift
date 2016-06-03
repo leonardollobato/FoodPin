@@ -173,6 +173,7 @@ UISearchResultsUpdating{
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destinationViewController as! RestaurantDetailViewController
                 //destinationController.restaurant = restaurants[indexPath.row]
+                destinationController.hidesBottomBarWhenPushed = true
                 destinationController.restaurant = (searchController.active) ?
                     searchResults[indexPath.row] : restaurants[indexPath.row]
             }
